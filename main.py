@@ -32,7 +32,6 @@ for sor in lista:
         print(f"4. feladat: {sor.ora * 3600 + sor.perc * 60 + sor.masodperc } másodperc")
 """
 masodperc = [sor.ora * 3600 + sor.perc * 60 + sor.masodperc for sor in lista if sor.versenyzo == "Fürge Ferenc" and sor.palya == "Gran Prix Circuit" and sor.kor == 3]
-
 print(f"4. feladat: {masodperc[0]} másodperc")
 #5.feladat
 bekernev = input("Kérem egy versenyző nevét: \n")
@@ -41,5 +40,9 @@ for sor in lista:
     if sor.versenyzo == bekernev:
         legkisebb = min(lista, key=lambda x:x.korido).korido
         legpalya = min(lista, key=lambda x:x.korido).palya
-print(f"6. feladat: {legpalya},{legkisebb}")
+        print(f"6. feladat: {legpalya},{legkisebb}")
+        break
+    else:
+        print("6. feladat Nincs ilyen versenyző az állományban")
+    break
         
